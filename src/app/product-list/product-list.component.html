@@ -1,0 +1,12 @@
+<div class="product-container">
+    <h2>Product List</h2>
+    <button class="add-btn" (click)="addNewProduct()">+ Add Product</button>
+    <div class="product-grid">
+      <app-product-detail
+        *ngFor="let product of products()"
+        [product]="product"
+        (delete)="deleteProduct($event)"
+        (edit)="editProduct($event)">
+      </app-product-detail>
+    </div>
+  </div>
