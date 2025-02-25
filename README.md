@@ -1,27 +1,47 @@
-# AngularCommunication
+# Angular Component Communication Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.12.
+## 📌 Task Overview
+This project focuses on **Component Communication** in Angular (v17+ using the Standalone API). The goal is to:
 
-## Development server
+1. Use `@Input` to pass a product object from a parent component to a child component for a detailed display.
+2. Use `@Output` and `EventEmitter` to allow the child component to notify the parent when a product is added, edited, or deleted.
+3. Create a shared service to manage product data and facilitate communication between sibling components.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Implementation Details
+### 🔹 **Technologies Used**
+- **Angular 17+ (Standalone API)**
+- TypeScript
+- HTML & CSS
 
-## Code scaffolding
+### 🔹 **Project Structure**
+```plaintext
+src/app/
+│── product-list/       # Parent component (lists products)
+│── product-detail/     # Child component (shows product details)
+│── shared/             # Shared service for data management
+│── app.component.ts    # Root component
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 🔹 **Features Implemented**
+✅ Fetch and display a list of products in `ProductListComponent` (parent).  
+✅ Use `@Input` to send selected product details to `ProductDetailComponent` (child).  
+✅ Use `@Output` and `EventEmitter` to notify parent when a product is added, updated, or deleted.  
+✅ Implement a shared service (`ProductService`) to manage product data.  
+✅ Apply styling for a clean UI. 
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🛠 How to Run
+1. Clone the repository:
+   ```sh
+   git clone <repo-url>
+   ```
+   ```sh
+   cd <repo-folder>
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Run the application:
+   ```sh
+   npm serve
+   ```
